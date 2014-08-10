@@ -7,6 +7,9 @@ gem 'pg', '0.15.1'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
 
 
 group :development, :test do
@@ -17,7 +20,18 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
-  gem 'libnotify', '0.8.0'
+
+  # Uncomment for guard on Ubuntu
+  # gem 'libnotify', '0.8.0'
+
+  # Uncomment for guard on OS X
+  gem 'growl'
+  gem 'growl_notify'
+
+  # Uncomment for guard on Windows
+  # gem 'rb-notifu', '0.0.4'
+  # gem 'wdm', '0.1.0'
+
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess', '0.3.6'
